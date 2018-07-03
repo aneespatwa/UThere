@@ -10,7 +10,9 @@ credentials = ServiceAccountCredentials.from_json_keyfile_name('Test-39c13991457
 gc = gspread.authorize(credentials)
 
 sht = gc.open('UThere')
-wrksht = sht.get_worksheet(0)
+usrs = sht.get_worksheet(0)
+events = sht.get_worksheet(1)
+matches = sht.get_worksheet(2)
 val = wrksht.cell(3,2).value  
 
 
